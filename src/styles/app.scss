@@ -1,0 +1,42 @@
+//
+
+html,
+body,
+.app-container,
+.main-content {
+  min-height: 100vh;
+}
+
+html {
+  background-color: #f2f8f7;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  margin: 0;
+}
+
+//
+
+.app-container,
+.main {
+  display: flex;
+  min-width: 100%;
+}
+
+.page-header {
+  margin-top: 2rem;
+  text-align: center;
+
+  > h1 {
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.page-header--centered {
+  text-align: center;
+}
