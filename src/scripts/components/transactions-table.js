@@ -22,9 +22,28 @@ function TransactionsTable () {
     transactions
   } = useTransactions();
 
+  //
+  // Methods
+
+  function getTotal () {
+    const amounts = transactions.map((transaction) => transaction.Amount);
+    return amounts.reduce((a, b) => parseFloat(a) + parseFloat(b));
+  }
+
+  //
+  // Render
+
   if (isLoading) {
     return (
-      <CircularProgress />
+      <CircularProgress className="transactions-table--loading" size={ 100 } />
+    );
+  }
+
+  if (error) {
+    return (
+      <div>
+        Unable to load transactions
+      </div>
     );
   }
 
@@ -36,7 +55,7 @@ function TransactionsTable () {
             <TableCell>Date</TableCell>
             <TableCell>Company</TableCell>
             <TableCell>Account</TableCell>
-            <TableCell>The Total</TableCell>
+            <TableCell>{ `$${ getTotal() }` }</TableCell>
           </TableRow>
         </TableHead>
         <TableBody className="transactions-table__body">

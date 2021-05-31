@@ -4,9 +4,8 @@ import React from 'react';
 // -------
 
 export default function useFetch (url, options) {
-  const [response, setResponse] = React.useState( null );
-  const [error, setError] = React.useState( null );
-  const [isLoading, setIsLoading] = React.useState( true );
+  const [response, setResponse] = React.useState();
+  const [error, setError] = React.useState();
 
   //
   // Internal
@@ -16,22 +15,21 @@ export default function useFetch (url, options) {
       const res = await fetch(url, options);
       const json = await res.json();
       
-      setResponse( json );
-      setIsLoading( false );
-    } catch ( error ) {
-      setError( error );
+      setResponse(json);
+    } catch (error) {
+      setError(error);
     }
   };
 
   //
   // Side-Effects
 
-  React.useEffect( () => {
+  React.useEffect(() => {
     fetchData();
-  }, [] );
+  }, []);
 
   //
   // Response
 
-  return { response, error, isLoading };
+  return { response, error };
 };
