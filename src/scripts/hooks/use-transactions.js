@@ -60,7 +60,7 @@ export default function useTransactions () {
     }
 
     fetchRemainingTransactions();
-  }, [ fetchRemainingTransactions, metaCallError, response ]);
+  }, [ metaCallError, response ]);
 
   //
   // Response
