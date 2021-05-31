@@ -10,4 +10,12 @@
   tr:nth-of-type(odd) {
     background-color: #3f51b514;
   }
+
+  td {
+    font-weight: 600;
+  }
+}
+
+.transactions-table__muted-cell {
+  opacity: 50%;
 }

@@ -41,9 +41,9 @@ function TransactionsTable () {
         <TableBody className="transactions-table__body">
           { transactions.map((row, index) => (
             <TableRow key={ `${ row.Company }-${ index }` }>
-              <TableCell>{ row.Date }</TableCell>
+              <TableCell className="transactions-table__muted-cell">{ row.Date }</TableCell>
               <TableCell>{ row.Company }</TableCell>
-              <TableCell>{ row.Ledger }</TableCell>
+              <TableCell className="transactions-table__muted-cell">{ row.Ledger }</TableCell>
               <TableCell>{ row.Amount }</TableCell>
             </TableRow>
           )) }
