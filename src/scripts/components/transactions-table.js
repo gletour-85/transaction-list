@@ -38,7 +38,7 @@ function TransactionsTable () {
             <TableCell>The Total</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody className="transactions-table__body">
           { transactions.map((row, index) => (
             <TableRow key={ `${ row.Company }-${ index }` }>
               <TableCell>{ row.Date }</TableCell>
