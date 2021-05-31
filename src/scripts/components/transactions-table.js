@@ -9,6 +9,7 @@ import {
   TableRow
 } from '@material-ui/core';
 import React from 'react';
+import classnames from 'classnames';
 import useTransactions from '../hooks/use-transactions';
 
 // Internal
@@ -44,7 +45,9 @@ function TransactionsTable () {
               <TableCell className="transactions-table__muted-cell">{ row.Date }</TableCell>
               <TableCell>{ row.Company }</TableCell>
               <TableCell className="transactions-table__muted-cell">{ row.Ledger }</TableCell>
-              <TableCell>{ row.Amount }</TableCell>
+              <TableCell className={ classnames({ 'transactions-table__credit-cell': row.Amount > 0 }) }>
+                { row.Amount }
+              </TableCell>
             </TableRow>
           )) }
         </TableBody>

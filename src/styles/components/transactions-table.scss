@@ -1,6 +1,8 @@
+$theme-color: #3f51b5; // TODO: import properly from material-ui palette 
+
 .transactions-table__header {
   th {
-    color: #3f51b5; // TODO: import properly from material-ui palette 
+    color: $theme-color;
     font-size: 1.25em;
     font-weight: bold;
   }
@@ -18,4 +20,9 @@
 
 .transactions-table__muted-cell {
   opacity: 50%;
+}
+
+// Increase specificity - would like to do this better
+.transactions-table__credit-cell.MuiTableCell-body {
+  color: $theme-color;
 }
