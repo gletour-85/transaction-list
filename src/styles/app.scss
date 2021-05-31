@@ -1,42 +1,36 @@
 //
 
+@import './components/transactions-table.scss';
+
+//
+
 html,
 body,
 .app-container,
 .main-content {
+  display: contents;
   min-height: 100vh;
 }
 
 html {
-  background-color: #f2f8f7;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
-  display: flex;
+  display: block;
   margin: 0;
 }
 
 //
 
-.app-container,
-.main {
+.main.MuiContainer-root {
+  background-color: #eaeaea;
   display: flex;
   min-width: 100%;
+  padding: 10em 3em;
 }
 
 .page-header {
-  margin-top: 2rem;
-  text-align: center;
-
-  > h1 {
-  }
-
-  > *:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.page-header--centered {
-  text-align: center;
+  height: 7em;
+  margin: auto;
 }
