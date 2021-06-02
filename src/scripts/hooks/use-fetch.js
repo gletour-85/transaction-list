@@ -8,24 +8,21 @@ export default function useFetch (url, options) {
   const [error, setError] = React.useState();
 
   //
-  // Internal
-
-  async function fetchData() {
-    try {
-      const res = await fetch(url, options);
-      const json = await res.json();
-      
-      setResponse(json);
-    } catch (error) {
-      setError(error);
-    }
-  };
-
-  //
   // Side-Effects
 
   React.useEffect(() => {
-    fetchData();
+    async function _fetchData() {
+      try {
+        const res = await fetch(url, options);
+        const json = await res.json();
+        
+        setResponse(json);
+      } catch (error) {
+        setError(error);
+      }
+    };
+
+    _fetchData();
   }, []);
 
   //
