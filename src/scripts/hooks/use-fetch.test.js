@@ -17,7 +17,7 @@ function ComponentThatUsesFetch({ url, options }) {
 async function getResult(props) {
   let component;
   await renderer.act(async () => (
-    component = renderer.create(<ComponentThatUsesFetch { ...props }/>)
+    component = renderer.create(<ComponentThatUsesFetch { ...props } />)
   ));
 
   return component.root.findByType('samp').props['data-provided-data'];
@@ -37,12 +37,12 @@ describe('useFetch', () => {
           ok: true
         });
 
-        result = await getResult({ url: 'mock-url', options: { headers: 'mock-headers' }});
+        result = await getResult({ url: 'mock-url', options: { headers: 'mock-headers' } });
       });
 
       it('calls fetch with given url and options', () => {
         expect(global.fetch).toHaveBeenCalledTimes(1);
-        expect(global.fetch).toHaveBeenCalledWith('mock-url', { headers: 'mock-headers' })
+        expect(global.fetch).toHaveBeenCalledWith('mock-url', { headers: 'mock-headers' });
       });
 
       it('returns the expected result', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import TransactionsTable from './transactions-table';
+import renderer from 'react-test-renderer';
 
 import mocked_useTransactions from '../hooks/use-transactions';
 

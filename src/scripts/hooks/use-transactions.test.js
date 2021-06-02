@@ -1,8 +1,7 @@
-// Tests
-// -----
+// TODO: implement use-transactions test
 
 describe('useTransactions', () => {
-  it('TODO: implement hook tests', () => {
+  it('placeholder hook test', () => {
     expect(true).toEqual(true);
   });
 });
