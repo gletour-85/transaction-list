@@ -42,7 +42,7 @@ function TransactionsTable () {
   if (error) {
     return (
       <div>
-        Unable to load transactions
+        { `Unable to load transactions, error: ${ error.message }` }
       </div>
     );
   }

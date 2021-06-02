@@ -15,8 +15,8 @@ module.exports = {
   ],
   coverageThreshold: {
     global: {
-      functions: 90,
-      statements: 90
+      functions: 50,
+      statements: 50
     }
   },
   moduleDirectories: [
@@ -31,8 +31,7 @@ module.exports = {
   ],
   testRegex: '(/src/.*|(\\.|/)).test\\.js$',
   transform: {
-    '\\.(aac|gif|eot|jpg|jpeg|m4a|mp3|mp4|oga|otf|png|svg|ttf|wav|webm|webp|woff|woff2)$': '<rootDir>/mocks/imports/transform-file.js',
-    '\\.[jt]sx?$': 'babel-jest'
+    '\\.(aac|gif|eot|jpg|jpeg|m4a|mp3|mp4|oga|otf|png|svg|ttf|wav|webm|webp|woff|woff2)$': '<rootDir>/mocks/imports/transform-file.js'
   },
   transformIgnorePatterns: []
 };

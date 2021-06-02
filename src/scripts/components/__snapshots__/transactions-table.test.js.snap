@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionsTable rendering when transactions are loading renders correctly 1`] = `
+<CircularProgress
+  className="transactions-table--loading"
+  size={100}
+/>
+`;
+
+exports[`TransactionsTable rendering when transactions failed to load renders correctly 1`] = `
+<div>
+  Unable to load transactions, error: request has timed out
+</div>
+`;
+
+exports[`TransactionsTable rendering when transactions have loaded renders correctly 1`] = `
+<TableContainer
+  component="Paper"
+>
+  <Table
+    aria-label="transactions table"
+    className="transactions-table"
+  >
+    <TableHead
+      className="transactions-table__header"
+    >
+      <TableRow>
+        <TableCell>
+          Date
+        </TableCell>
+        <TableCell>
+          Company
+        </TableCell>
+        <TableCell>
+          Account
+        </TableCell>
+        <TableCell>
+          $10.25
+        </TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody
+      className="transactions-table__body"
+    >
+      <TableRow>
+        <TableCell
+          className="transactions-table__muted-cell"
+        >
+          2021-05-23
+        </TableCell>
+        <TableCell>
+          mock-company-1
+        </TableCell>
+        <TableCell
+          className="transactions-table__muted-cell"
+        >
+          mock-debit-1
+        </TableCell>
+        <TableCell
+          className=""
+        >
+          -5.00
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell
+          className="transactions-table__muted-cell"
+        >
+          2021-05-24
+        </TableCell>
+        <TableCell>
+          mock-company-2
+        </TableCell>
+        <TableCell
+          className="transactions-table__muted-cell"
+        >
+          mock-debit-2
+        </TableCell>
+        <TableCell
+          className=""
+        >
+          -10.25
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell
+          className="transactions-table__muted-cell"
+        >
+          2021-05-25
+        </TableCell>
+        <TableCell>
+          mock-company-3
+        </TableCell>
+        <TableCell
+          className="transactions-table__muted-cell"
+        >
+          mock-credit-1
+        </TableCell>
+        <TableCell
+          className="transactions-table__credit-cell"
+        >
+          5.00
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell
+          className="transactions-table__muted-cell"
+        >
+          2021-05-26
+        </TableCell>
+        <TableCell>
+          mock-company-4
+        </TableCell>
+        <TableCell
+          className="transactions-table__muted-cell"
+        >
+          mock-credit-2
+        </TableCell>
+        <TableCell
+          className="transactions-table__credit-cell"
+        >
+          20.50
+        </TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+</TableContainer>
+`;
